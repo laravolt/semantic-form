@@ -15,11 +15,18 @@ class Wrapper extends Element
     public function render()
     {
 
+        $this->beforeRender();
+
         if ($this->label) {
             $element = clone $this;
             $element->label = false;
 
-            return (new Field($this->label, $element))->addClass($element->getPrimaryControl()->fieldWidth)->render();
+            $field = (new Field($this->label, $element));
+            if ($control = $element->getPrimaryControl()) {
+                $field->addClass($control->fieldWidth);
+            }
+
+            return $field->render();
         }
 
         $html = '<div';

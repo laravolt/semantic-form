@@ -1,29 +1,33 @@
 <?php namespace Laravolt\SemanticForm\Elements;
 
-class Icon extends Element
+class UiLabel extends Element
 {
     protected $attributes = [
-        'class' => 'icon',
+        'class' => 'ui label',
     ];
+
+    protected $text;
 
     /**
      * Icon constructor.
      * @param string icon name
      */
-    public function __construct($icon)
+    public function __construct($text)
     {
-        $this->addClass($icon);
+        $this->text = $text;
     }
 
 
     public function render()
     {
 
-        $html = '<i';
+        $html = '<div';
         $html .= $this->renderAttributes();
         $html .= '>';
 
-        $html .= '</i>';
+        $html .= $this->text;
+
+        $html .= '</div>';
 
         return $html;
     }
