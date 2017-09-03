@@ -36,5 +36,15 @@
         "psr-4": {
             "Laravolt\\SemanticForm\\Test\\": "tests"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravolt\\SemanticForm\\ServiceProvider"
+            ],
+            "aliases": {
+                "SemanticForm": "Laravolt\\SemanticForm\\Facade"
+            }
+        }
     }
 }
