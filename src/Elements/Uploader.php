@@ -10,7 +10,6 @@ class Uploader extends Input
         'type' => 'file',
         'class' => 'uploader',
         'data-limit' => 1,
-        'data-fileMaxSize' => null,
     ];
 
     protected $ajax = true;
