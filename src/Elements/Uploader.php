@@ -92,13 +92,14 @@ class Uploader extends Input
                     ],
                 ];
             } else {
-                $file = public_path(trim($media, '/'));
-                if (file_exists($file)) {
+                $mediaUrl = url(trim($media, '/'));
+                $mediaHeader = @get_headers($mediaUrl, true);
+                if ($mediaHeader['Content-Length'] > 0) {
                     $data[] = [
-                        'file' => URL::to($media),
+                        'file' => $mediaUrl,
                         'name' => basename($media),
-                        'size' => filesize($file),
-                        'type' => mime_content_type($file),
+                        'size' => $mediaHeader['Content-Length'],
+                        'type' => $mediaHeader['Content-Type'] ?? '',
                     ];
                 }
             }
