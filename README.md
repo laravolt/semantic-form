@@ -1,3 +1,5 @@
+> **Archived.** This repository is no longer maintained. Its functionality lives in [laravolt/laravolt](https://github.com/laravolt/laravolt) (`composer require laravolt/laravolt`). Docs: https://laravolt.dev
+
 # Semantic Form
 [![SensioLabsInsight](https://img.shields.io/sensiolabs/i/7378998a-4d74-43aa-841a-d85b74579734.svg)](https://insight.sensiolabs.com/projects/7378998a-4d74-43aa-841a-d85b74579734)
 [![Travis](https://img.shields.io/travis/laravolt/semantic-form.svg)](https://travis-ci.org/laravolt/semantic-form)
